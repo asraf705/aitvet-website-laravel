@@ -13,7 +13,7 @@
                         </div>
                         <hr>
 
-                        <form action="{{ route('add.store') }}" method="POST"
+                        <form action="{{ route('category.store') }}" method="POST"
                         role="form"  enctype="multipart/form-data">
 
                             @csrf

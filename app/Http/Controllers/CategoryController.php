@@ -14,9 +14,7 @@ class CategoryController extends Controller
      private static $category;
     public function index()
     {
-        return view('admin.category.manag-category',[
-            'category'=>Category::all()
-        ]);
+        return view('admin.category.manag-category');
     }
 
     /**
@@ -24,7 +22,7 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        return view('admin.category.add-category');
+        // return view('admin.category.add-category');
     }
 
     /**
