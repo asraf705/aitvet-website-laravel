@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CategoryController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\DashboardController;
@@ -31,6 +32,7 @@ Route::middleware(['auth:sanctum',config('jetstream.auth_session'),'verified',])
     Route::get('/dashboard',[DashboardController::class,'index'])->name('dashboard');
     Route::get('/payment/print',[DashboardController::class,'paymentPrint'])->name('paymentprint');
     Route::resources(['paymentstatuses'=>PaymentstatusController::class]);
+    Route::resources(['category'=>CategoryController::class]);
     Route::resources(['notise'=>NotiseController::class]);
 });
 
