@@ -8,6 +8,9 @@
                 <div class="card">
                     <div class="card-body">
                         <h4>Manag Notise</h4>
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                            <a href="{{route('notise.create')}}" type="button" class="btn btn btn-outline-success">Add Notise</a>
+                        </div>
                         <hr>
 
                         <div class="table-responsive pt-3">

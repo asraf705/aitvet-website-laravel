@@ -8,6 +8,9 @@
                 <div class="card">
                     <div class="card-body">
                         <h4>Add Notise</h4>
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                            <a href="{{route('notise.index')}}" type="button" class="btn btn-outline-danger">Back ></a>
+                        </div>
                         <hr>
 
                         <form action="{{ route('notise.store') }}" method="POST"
