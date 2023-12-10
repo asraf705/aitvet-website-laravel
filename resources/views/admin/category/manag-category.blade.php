@@ -44,19 +44,15 @@
                                                         <th>Action</th>
                                                     </tr>
                                                 </thead>
-
                                                 <tbody align="center">
-
-
-                                                        <tr>
-                                                            <td>sdfdf</td>
-                                                            <td>df</td>
-                                                            <td>fdghf</td>
-                                                        </tr>
-
+                                                    <tr>
+                                                        <td>sdfdf</td>
+                                                        <td>df</td>
+                                                        <td>fdghf</td>
+                                                    </tr>
                                                 </tbody>
                                             </table>
-
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -73,9 +69,34 @@
                                 </h2>
                                 <div id="semester" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
                                     data-bs-parent="#accordionFlushExample">
-                                    <div class="accordion-body">Placeholder content for this accordion, which is intended to
-                                        demonstrate the <code>.accordion-flush</code> class. This is the second item's
-                                        accordion body. Let's imagine this being filled with some actual content.</div>
+                                    <div class="accordion-body">
+                                        <!-- add semester -->
+                                        <div class="d-grid gap-2">
+                                            <a href="{{ route('category.create') }}" type="button"
+                                                class="btn btn btn-outline-success">Add Semester</a>
+                                        </div>
+                                        <hr>
+                                        <!-- manage depertment -->
+                                        <div class="table-responsive pt-3">
+                                            <table class="table table-bordered">
+                                                <thead>
+                                                    <tr align="center">
+                                                        <th>Sl</th>
+                                                        <th>Titel</th>
+                                                        <th>Image</th>
+                                                        <th>Action</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody align="center">
+                                                    <tr>
+                                                        <td>sdfdf</td>
+                                                        <td>df</td>
+                                                        <td>fdghf</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 
@@ -90,11 +111,33 @@
                                 </h2>
                                 <div id="fees" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
                                     data-bs-parent="#accordionFlushExample">
-                                    <div class="accordion-body">Placeholder content for this accordion, which is intended to
-                                        demonstrate the <code>.accordion-flush</code> class. This is the third item's
-                                        accordion body. Nothing more exciting happening here in terms of content, but just
-                                        filling up the space to make it look, at least at first glance, a bit more
-                                        representative of how this would look in a real-world application.</div>
+                                    <div class="accordion-body">
+                                        <!-- add fees -->
+                                        <div class="d-grid gap-2">
+                                            <a href="{{ route('category.create') }}" type="button"
+                                                class="btn btn btn-outline-success">Add Depertment</a>
+                                        </div>
+                                        <hr>
+                                        <!-- manage fees -->
+                                        <div class="table-responsive pt-3">
+                                            <table class="table table-bordered">
+                                                <thead>
+                                                    <tr align="center">
+                                                        <th>Sl</th>
+                                                        <th>Titel</th>
+                                                        <th>Image</th>
+                                                        <th>Action</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody align="center">
+                                                    <tr>
+                                                        <td>sdfdf</td>
+                                                        <td>df</td>
+                                                        <td>fdghf</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div></div>
                                 </div>
                             </div>
                         </div>
