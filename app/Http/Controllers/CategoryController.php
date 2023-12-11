@@ -13,7 +13,7 @@ use App\Models\AdmintionCategory;
 
 class CategoryController extends Controller
 {
-    public static $depertmentcategory,$semestercategory,$feescategory,$admintioncategory;
+    public static $depertmentcategory,$semestercategory,$feescategory;
 
     // all manage category
 
@@ -89,31 +89,6 @@ class CategoryController extends Controller
         return back();
     }
 
-    //------------------ admintion ------------------------------>
-
-    public function admiaddcategory(){
-        return view('admin.category.add-admintion-category',[
-            'depertment_categories' => DepertmentCategory::all()
-        ]);
-    }
-
-    public function admisaveCategory(Request $request){
-        AdmintionCategory::admisaveCategory($request);
-        return back();
-    }
-
-    public function admishowCategory(string $id)
-    {
-        self::$admintioncategory =AdmintionCategory::find($id);
-        if (self::$admintioncategory->status == 1){
-            self::$admintioncategory->status = 0;
-        }
-        else{
-            self::$admintioncategory->status = 1;
-        }
-        self::$admintioncategory->save();
-        return back();
-    }
 
 
 
