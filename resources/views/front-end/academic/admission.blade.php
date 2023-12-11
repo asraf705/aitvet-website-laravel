@@ -60,7 +60,7 @@
                                 </thead>
                                 <tbody>
                                     <tr align="center">
-                                        <th scope="row"></th>
+                                        <th ></th>
                                         <td></td>
                                         <td></td>
                                         <td>Morning Shift</td>
@@ -68,7 +68,7 @@
                                     </tr>
 
                                     <tr align="center">
-                                        <th scope="row">01</th>
+                                        <th >01</th>
                                         <td>61</td>
                                         <td>Architecture Technology</td>
                                         <td>50</td>
@@ -76,7 +76,7 @@
                                     </tr>
 
                                     <tr align="center">
-                                        <th scope="row">02</th>
+                                        <th >02</th>
                                         <td>63</td>
                                         <td>Chemical Technology</td>
                                         <td>50</td>
@@ -84,7 +84,7 @@
                                     </tr>
 
                                     <tr align="center">
-                                        <th scope="row">03</th>
+                                        <th >03</th>
                                         <td>64</td>
                                         <td>Civil Technology</td>
                                         <td>50</td>
@@ -92,7 +92,7 @@
                                     </tr>
 
                                     <tr align="center">
-                                        <th scope="row">04</th>
+                                        <th >04</th>
                                         <td>66</td>
                                         <td>Computer Technology</td>
                                         <td>50</td>
@@ -100,7 +100,7 @@
                                     </tr>
 
                                     <tr align="center">
-                                        <th scope="row">05</th>
+                                        <th >05</th>
                                         <td>67</td>
                                         <td>Electrical Technology</td>
                                         <td>50</td>
@@ -108,7 +108,7 @@
                                     </tr>
 
                                     <tr align="center">
-                                        <th scope="row">06</th>
+                                        <th >06</th>
                                         <td>68</td>
                                         <td>Electronics Technology</td>
                                         <td>50</td>
@@ -116,7 +116,7 @@
                                     </tr>
 
                                     <tr align="center">
-                                        <th scope="row">07</th>
+                                        <th >07</th>
                                         <td>19</td>
                                         <td>Textile Technology</td>
                                         <td>50</td>
@@ -136,31 +136,31 @@
                             <table class="table table-bordered">
                                 <thead>
                                     <tr align="center">
-                                        <th scope="col">Serial no</th>
-                                        <th scope="col">Expenditure sectors</th>
-                                        <th scope="col">Amount of tk (for Engineering Technology) </th>
-                                        <th scope="col">Amount of tk (for Textile Technology)</th>
+                                        <th>Serial no</th>
+                                        <th>Expenditure sectors</th>
+                                        <th>Amount of tk (for Engineering Technology)</th>
+                                        <th>Amount of tk (for Textile Technology)</th>
                                     </tr>
                                 </thead>
 
                                 <tbody>
 
                                     <tr align="center">
-                                        <th scope="row">01</th>
+                                        <th data-label="Depertment">01</th>
                                         <td>Admission Fee (Admission, Registration and ID card)</td>
                                         <td>5,000/-</td>
                                         <td>5,000/-</td>
                                     </tr>
 
                                     <tr align="center">
-                                        <th scope="row">02</th>
+                                        <th >02</th>
                                         <td>Tuition Fee</td>
                                         <td>6,500/-</td>
                                         <td>6,500/-</td>
                                     </tr align="center">
 
                                     <tr align="center">
-                                        <th scope="row">03</th>
+                                        <th >03</th>
                                         <td>Laboratory Fee</td>
                                         <td>3,000/-</td>
                                         <td>4,000/-</td>
@@ -168,7 +168,7 @@
                                     </tr>
 
                                     <tr align="center">
-                                        <th scope="row">04</th>
+                                        <th >04</th>
                                         <td>Internal Exam Fee</td>
                                         <td>500/-</td>
                                         <td>500/-</td>
@@ -176,7 +176,7 @@
                                     </tr>
 
                                     <tr align="center">
-                                        <th scope="row">05</th>
+                                        <th >05</th>
                                         <td>Establishment Fee</td>
                                         <td>6,000/-</td>
                                         <td>7,000/-</td>
@@ -184,7 +184,7 @@
                                     </tr>
 
                                     <tr align="center">
-                                        <th scope="row">06</th>
+                                        <th >06</th>
                                         <td>Application fee of online by Bangladesh Technical Education Board</td>
                                         <td>160/-</td>
                                         <td>160/-</td>

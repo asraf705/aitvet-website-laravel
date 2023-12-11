@@ -39,7 +39,7 @@
                   </a>
                   <div class="collapse" id="account">
                       <ul class="nav flex-column sub-menu">
-                          <li class="nav-item"> <a class="nav-link" href="{{ route('paymentstatuses.index') }}">Payment
+                          <li class="nav-item"> <a class="nav-link" href="{{ route('paymentdetials') }}">Payment
                                   Details</a></li>
                           <li class="nav-item"> <a class="nav-link" href="{{ route('paymentprint') }}">Payment Print</a>
                           </li>

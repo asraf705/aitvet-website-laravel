@@ -15,21 +15,17 @@ class PaymentstatusController extends Controller
     public function index(Request $request)
     {
 
-        $search = $request['search']??"";
-        if ($search != ""){
+        $searchQuary =$request['search']??"";
+        $paymentstatuses = "";
+        if($searchQuary != $paymentstatuses){
             //where
-            $paymentstatuses = Paymentstatus::where('roll','like',"$search")->get();
-            // $paymentstatuses = Paymentstatus::where('semester','=',$search)->get();
-            // $paymentstatuses = Paymentstatus::where('depertment','=',$search)->get();
-            // $paymentstatuses = Paymentstatus::where('paytype','=',"%$search")->get();
-
-        }
-        else{
-            $paymentstatuses = Paymentstatus::all();
+            $paymentstatuses = Paymentstatus::where('roll','=',"$searchQuary")->get();
         }
 
-        $data = compact('paymentstatuses','search');
-        return view('admin.acount-manag.payment-details')->with($data);
+        $data = compact('paymentstatuses','searchQuary');
+        return view('front-end.student.paymentstatus',[
+            'paymentstatuses' => Paymentstatus::all(),
+        ])->with($data);
     }
 
     /**

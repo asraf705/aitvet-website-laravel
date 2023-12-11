@@ -1,11 +1,14 @@
 <?php
 
-use App\Http\Controllers\CategoryController;
+
+
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\PaymentstatusController;
 use App\Http\Controllers\NotiseController;
+use App\Http\Controllers\CategoryController;
+
 
 
 // Front-end Start
@@ -19,7 +22,7 @@ Route::get('gallery',[HomeController::class,'gallery'])->name('gallery');
 Route::get('/payment/system',[HomeController::class,'paymentSystem'])->name('paymentsystem');
 Route::get('/payment/from',[HomeController::class,'paymentForm'])->name('paymentform');
 Route::get('/payment/status',[HomeController::class,'status'])->name('status');
-
+Route::resources(['paymentstatuses'=>PaymentstatusController::class]);
 
 // Front-end  End
 
@@ -30,10 +33,18 @@ Route::get('/payment/status',[HomeController::class,'status'])->name('status');
 
 Route::middleware(['auth:sanctum',config('jetstream.auth_session'),'verified',])->group(function () {
     Route::get('/dashboard',[DashboardController::class,'index'])->name('dashboard');
-    Route::get('/payment/print',[DashboardController::class,'paymentPrint'])->name('paymentprint');
-    Route::resources(['paymentstatuses'=>PaymentstatusController::class]);
-    Route::resources(['category'=>CategoryController::class]);
+    Route::get('/manage/category',[CategoryController::class,'manageCategory'])->name('manage.Category');
+    Route::get('/add/depertment/category',[CategoryController::class,'depertmentcategory'])->name('depertment.category');
+    Route::post('/new/depertment/category',[CategoryController::class,'deptsaveCategory'])->name('new.dept.category');
+
+    Route::get('/add-semester-category',[CategoryController::class,'semestercategory'])->name('semester.category');
+
+
+    Route::get('/add-fees-category',[CategoryController::class,'feescategory'])->name('fees.category');
     Route::resources(['notise'=>NotiseController::class]);
+    Route::get('payment/detials',[DashboardController::class,'paymentDetials'])->name('paymentdetials');
+    Route::get('/payment/print',[DashboardController::class,'paymentPrint'])->name('paymentprint');
+
 });
 
 

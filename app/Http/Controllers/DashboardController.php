@@ -23,6 +23,20 @@ class DashboardController extends Controller
 
     }
 
+    public function paymentDetials(Request $request){
+        $search = $request['search']??"";
+        if ($search != ""){
+            //where
+            $paymentstatuses = Paymentstatus::where('roll','like',"$search")->get();
+
+        }
+        else{
+            $paymentstatuses = Paymentstatus::all();
+        }
+
+        $data = compact('paymentstatuses','search');
+        return view('admin.acount-manag.payment-details')->with($data);
+    }
 
 
     public function paymentPrint(Request $request){
@@ -43,10 +57,6 @@ class DashboardController extends Controller
 
         $data = compact('paymentstatuses','search');
         return view('admin.acount-manag.payment-print')->with($data);
-
-
-
-
 
     }
 
