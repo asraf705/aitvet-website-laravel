@@ -1,7 +1,6 @@
 <?php
 
-
-
+use App\Http\Controllers\AdmintionController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\DashboardController;
@@ -55,9 +54,8 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified',
     Route::post('/new/fees/category', [CategoryController::class, 'feesaveCategory'])->name('new.fee.category');
     Route::get('/delete/fees/category/{id}', [CategoryController::class, 'feedeleteCategory'])->name('delete.fee.category');
 
-    //admintion
-    Route::get('/add/admintion/category', [CategoryController::class, 'admiaddcategory'])->name('admi.category');
-    Route::post('/new/admintion/category', [CategoryController::class, 'admisaveCategory'])->name('new.admi.category');
+    // admintion
+    Route::resource('admitioncategory', AdmintionController::class);
 
     Route::resources(['notise' => NotiseController::class]);
     Route::get('payment/detials', [DashboardController::class, 'paymentDetials'])->name('paymentdetials');

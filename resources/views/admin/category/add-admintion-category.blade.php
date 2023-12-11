@@ -13,7 +13,7 @@
                         </div>
                         <hr>
 
-                        <form action="{{route('new.admi.category')}}" method="POST" role="form" >
+                        <form action="{{route('admitioncategory.store')}}" method="POST" role="form" >
 
                             @csrf
 
@@ -22,8 +22,8 @@
                                     <label for="depertmant_name">Depertment</label> <br>
                                     <select name="depertmant_id" id="depertment_id" class="form-select"  required>
                                         <option value="">Select Depertment</option>
-                                        @foreach ($depertment as $depertment)
-                                            <option value="{{$depertment->id}}"> {{$depertment->depertmant_name}}</option>
+                                        @foreach ($depertment_categories as $depertment)
+                                            <option value="{{$depertment->depertmant_name}}"> {{$depertment->depertmant_name}}</option>
                                         @endforeach
 
                                     </select>

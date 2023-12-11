@@ -19,10 +19,10 @@ class CategoryController extends Controller
 
     public function manageCategory(){
         return view('admin.category.manag-category',[
-            'depertments'=> DepertmentCategory::all(),
-            'semester' => SemesterCategory::all(),
-            'fees' => FeesCategory::all(),
-            'admintion' => AdmintionCategory::all(),
+            'depertment_categories'=> DepertmentCategory::all(),
+            'semester_categories' => SemesterCategory::all(),
+            'fees_categories' => FeesCategory::all(),
+            'admintion_categories' => AdmintionCategory::all(),
 
         ]);
     }
@@ -93,7 +93,7 @@ class CategoryController extends Controller
 
     public function admiaddcategory(){
         return view('admin.category.add-admintion-category',[
-            'depertments' => DepertmentCategory::all()
+            'depertment_categories' => DepertmentCategory::all()
         ]);
     }
 
@@ -101,6 +101,21 @@ class CategoryController extends Controller
         AdmintionCategory::admisaveCategory($request);
         return back();
     }
+
+    public function admishowCategory(string $id)
+    {
+        self::$admintioncategory =AdmintionCategory::find($id);
+        if (self::$admintioncategory->status == 1){
+            self::$admintioncategory->status = 0;
+        }
+        else{
+            self::$admintioncategory->status = 1;
+        }
+        self::$admintioncategory->save();
+        return back();
+    }
+
+
 
 
 }

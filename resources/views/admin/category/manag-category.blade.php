@@ -47,7 +47,7 @@
                                                 <tbody align="center">
 
                                                     @csrf
-                                                    @foreach ($depertments as $depertment)
+                                                    @foreach ($depertment_categories as $depertment)
                                                         <tr>
                                                             <td data-label="Sl">{{ $loop->iteration }}</td>
                                                             <td data-label="Depertment">{{ $depertment->depertmant_name }}
@@ -104,7 +104,7 @@
                                                 </thead>
                                                 <tbody align="center">
                                                     @csrf
-                                                    @foreach ($semester as $semester)
+                                                    @foreach ($semester_categories as $semester)
                                                         <tr>
                                                             <td data-label="Sl">{{ $loop->iteration }}</td>
                                                             <td data-label="Semester">{{ $semester->semester }}</td>
@@ -155,7 +155,7 @@
                                                 </thead>
                                                 <tbody align="center">
                                                     @csrf
-                                                    @foreach ($fees as $fee)
+                                                    @foreach ($fees_categories as $fee)
                                                         <tr>
                                                             <td data-label="Sl">{{ $loop->iteration }}</td>
                                                             <td data-label="Fess">{{ $fee->fees_type }}</td>
@@ -185,13 +185,13 @@
                                         Admintion Status
                                     </button>
                                 </h2>
-                                <div id="admintion" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
-                                    data-bs-parent="#managecategory">
+                                <div id="admintion" class="accordion-collapse collapse"
+                                    aria-labelledby="flush-headingThree" data-bs-parent="#managecategory">
                                     <div class="accordion-body">
                                         <!-- add admintion -->
 
                                         <div class="d-grid gap-2">
-                                            <a href="{{ route('admi.category') }}" type="button"
+                                            <a href="{{ route('admitioncategory.create') }}" type="button"
                                                 class="btn btn btn-outline-success">Add Admintion</a>
                                         </div>
                                         <hr>
@@ -208,11 +208,21 @@
                                                 </thead>
                                                 <tbody align="center">
                                                     @csrf
-                                                    @foreach ($admintion as $admintion)
+                                                    @foreach ($admintion_categories as $admintion)
                                                         <tr>
                                                             <td data-label="Sl">{{ $loop->iteration }}</td>
-                                                            <td data-label="Depertment">{{ $admintion->depertments->depertmant_name}}</td>
-                                                            <td data-label="Status">{{$admintion->status== 1 ? 'Open' : 'Close' }}</td>
+                                                            <td data-label="Depertment">
+                                                                {{ $admintion->depertmant_id }}
+                                                            </td>
+                                                            <td data-label="Status">
+                                                                @if ($admintion->status == 1)
+                                                                    <a href="{{ route('admitioncategory.show', $admintion->id) }}"
+                                                                        class="btn btn-success btn-sm">Open</a>
+                                                                @else
+                                                                    <a href="{{ route('admitioncategory.show', $admintion->id) }}"
+                                                                        class="btn btn-warning btn-sm">Closed</a>
+                                                                @endif
+                                                            </td>
                                                         </tr>
                                                     @endforeach
                                                 </tbody>

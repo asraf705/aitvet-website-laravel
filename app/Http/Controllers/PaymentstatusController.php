@@ -42,7 +42,7 @@ class PaymentstatusController extends Controller
     public function store(Request $request)
     {
         Paymentstatus::saveInfo($request);
-        return back();
+        return redirect(route('paymentstatuses.index'));
     }
 
     /**
