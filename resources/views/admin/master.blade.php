@@ -32,7 +32,6 @@
     <link href="{{ asset('front-end-assets') }}/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
     <!-- endinject -->
-    <link rel="shortcut icon" href="{{ asset('back-end-assets') }}/assets/images/logo.png" />
 </head>
 
 <body>
