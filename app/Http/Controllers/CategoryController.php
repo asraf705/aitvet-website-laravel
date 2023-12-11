@@ -2,66 +2,105 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Category;
+
 use Illuminate\Http\Request;
+use App\Models\DepertmentCategory;
+use App\Models\SemesterCategory;
+use App\Models\FeesCategory;
+use App\Models\AdmintionCategory;
+
+
 
 class CategoryController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+    public static $depertmentcategory,$semestercategory,$feescategory,$admintioncategory;
 
-     private static $category;
-    public function index()
-    {
-        return view('admin.category.manag-category');
+    // all manage category
+
+    public function manageCategory(){
+        return view('admin.category.manag-category',[
+            'depertments'=> DepertmentCategory::all(),
+            'semester' => SemesterCategory::all(),
+            'fees' => FeesCategory::all(),
+            'admintion' => AdmintionCategory::all(),
+
+        ]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        // return view('admin.category.add-category');
+    // -------------------- depertment ----------------------------
+
+
+    public function depertmentaddcategory(){
+        return view('admin.category.add-dept-category');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        //
+    public function deptsaveCategory(Request $request){
+        DepertmentCategory::deptsaveCategory($request);
+        return back();
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
+    public function depteditCategory($id){
+        return view('admin.category.edit-dept-category',[
+            'depertment'=> DepertmentCategory::find($id)
+        ]);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
-    {
-        //
+    public function deptupdateCategory(Request $request){
+        DepertmentCategory::deptupdateCategory($request);
+        return back();
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
-    {
-        //
+    public function deptdeleteCategory($id){
+        self::$depertmentcategory = DepertmentCategory::find($id);
+        self::$depertmentcategory->delete();
+        return back();
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
-    {
-        //
+    // -------------------- semester ----------------------------
+    public function semsteraddcategory(){
+        return view('admin.category.add-sem-category');
     }
+
+    public function semesaveCategory(Request $request){
+        SemesterCategory::semesaveCategory($request);
+        return back();
+    }
+
+    public function semedeleteCategory($id){
+        self::$semestercategory = SemesterCategory::find($id);
+        self::$semestercategory->delete();
+        return back();
+    }
+
+    // -------------------- fees ----------------------------
+    public function feesaddcategory(){
+        return view('admin.category.add-fees-category');
+    }
+
+    public function feesaveCategory(Request $request){
+        FeesCategory::feesaveCategory($request);
+        return back();
+    }
+
+
+    public function feedeleteCategory($id){
+        self::$feescategory = FeesCategory::find($id);
+        self::$feescategory->delete();
+        return back();
+    }
+
+    //------------------ admintion ------------------------------>
+
+    public function admiaddcategory(){
+        return view('admin.category.add-admintion-category',[
+            'depertments' => DepertmentCategory::all()
+        ]);
+    }
+
+    public function admisaveCategory(Request $request){
+        AdmintionCategory::admisaveCategory($request);
+        return back();
+    }
+
+
 }

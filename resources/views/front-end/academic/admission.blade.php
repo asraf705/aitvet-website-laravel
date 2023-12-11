@@ -52,82 +52,80 @@
                             <table class="table table-bordered">
                                 <thead>
                                     <tr align="center">
-                                        <th scope="col">Serial no</th>
-                                        <th scope="col">Curriculum Code no</th>
-                                        <th scope="col">Name of the Technology </th>
+                                        <th >Serial no</th>
+                                        <th >Curriculum Code no</th>
+                                        <th >Name of the Technology </th>
                                         <th colspan="2">Number of seats in Karwan Bazar Campus</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr align="center">
-                                        <th ></th>
-                                        <td></td>
-                                        <td></td>
+                                        <td colspan="3"></td>
                                         <td>Morning Shift</td>
                                         <td>Day Shift</td>
                                     </tr>
 
                                     <tr align="center">
-                                        <th >01</th>
-                                        <td>61</td>
-                                        <td>Architecture Technology</td>
-                                        <td>50</td>
-                                        <td>50</td>
+                                        <td data-label="Sl. no:">01</td>
+                                        <td data-label="Curriculum Code:">61</td>
+                                        <td data-label="Depertment:">Architecture Technology</td>
+                                        <td data-label="Morning Shift:">50</td>
+                                        <td data-label="Day Shift:">50</td>
                                     </tr>
 
                                     <tr align="center">
-                                        <th >02</th>
-                                        <td>63</td>
-                                        <td>Chemical Technology</td>
-                                        <td>50</td>
-                                        <td>-</td>
+                                        <td data-label="Sl. no:">02</td>
+                                        <td data-label="Curriculum Code:">63</td>
+                                        <td data-label="Depertment:">Chemical Technology</td>
+                                        <td data-label="Morning Shift:">50</td>
+                                        <td data-label="Day Shift:">None</td>
                                     </tr>
 
                                     <tr align="center">
-                                        <th >03</th>
-                                        <td>64</td>
-                                        <td>Civil Technology</td>
-                                        <td>50</td>
-                                        <td>100</td>
+                                        <td data-label="Sl. no:">03</td>
+                                        <td data-label="Curriculum Code:">64</td>
+                                        <td data-label="Depertment:">Civil Technology</td>
+                                        <td data-label="Morning Shift:">50</td>
+                                        <td data-label="Day Shift:">100</td>
                                     </tr>
 
                                     <tr align="center">
-                                        <th >04</th>
-                                        <td>66</td>
-                                        <td>Computer Technology</td>
-                                        <td>50</td>
-                                        <td>100</td>
+                                        <td data-label="Sl. no:">04</td>
+                                        <td data-label="Curriculum Code:">66</td>
+                                        <td data-label="Depertment:">Computer Technology</td>
+                                        <td data-label="Morning Shift:">50</td>
+                                        <td data-label="Day Shift:">100</td>
                                     </tr>
 
                                     <tr align="center">
-                                        <th >05</th>
-                                        <td>67</td>
-                                        <td>Electrical Technology</td>
-                                        <td>50</td>
-                                        <td>100</td>
+                                        <td data-label="Sl. no:">05</td>
+                                        <td data-label="Curriculum Code:">67</td>
+                                        <td data-label="Depertment:">Electrical Technology</td>
+                                        <td data-label="Morning Shift:">50</td>
+                                        <td data-label="Day Shift:">100</td>
                                     </tr>
 
                                     <tr align="center">
-                                        <th >06</th>
-                                        <td>68</td>
-                                        <td>Electronics Technology</td>
-                                        <td>50</td>
-                                        <td>50</td>
+                                        <td data-label="Sl. no:">06</td>
+                                        <td data-label="Curriculum Code:">68</td>
+                                        <td data-label="Depertment:">Electronics Technology</td>
+                                        <td data-label="Morning Shift:">50</td>
+                                        <td data-label="Day Shift:">50</td>
                                     </tr>
 
                                     <tr align="center">
-                                        <th >07</th>
-                                        <td>19</td>
-                                        <td>Textile Technology</td>
-                                        <td>50</td>
-                                        <td>50</td>
+                                        <td data-label="Sl. no:">07</td>
+                                        <td data-label="Curriculum Code:">19</td>
+                                        <td data-label="Depertment:">Textile Technology</td>
+                                        <td data-label="Morning Shift:">50</td>
+                                        <td data-label="Day Shift:">50</td>
                                     </tr>
 
                                 </tbody>
                             </table>
 
-                            <h6 style="color: #7cc576;">Morning Shift starts from – 8.00 AM</h6>
-                            <h6 style="color: #7cc576;">Day Shift starts from – 10.15 AM</h6>
+                            <h6 style="color: #188f0d;"><samp style="color: #f30c0c;">*</samp> Shift starts from – 8.00 AM</h6>
+                            <h6 style="color: #188f0d;"><samp style="color: #f30c0c;">*</samp> Day Shift starts from – 10.15 AM</h6>
 
                             <br>
 
@@ -146,48 +144,48 @@
                                 <tbody>
 
                                     <tr align="center">
-                                        <th data-label="Depertment">01</th>
-                                        <td>Admission Fee (Admission, Registration and ID card)</td>
-                                        <td>5,000/-</td>
-                                        <td>5,000/-</td>
+                                        <td data-label="Serial no">01</th>
+                                        <td data-label="Expenditure sectors">Admission Fee (Admission, Registration and ID card)</td>
+                                        <td data-label=" Engineering Technology">5,000 Tk</td>
+                                        <td data-label="Textile Technology">5,000/-</td>
                                     </tr>
 
                                     <tr align="center">
-                                        <th >02</th>
-                                        <td>Tuition Fee</td>
-                                        <td>6,500/-</td>
-                                        <td>6,500/-</td>
+                                        <td data-label="Serial no">02</td>
+                                        <td data-label="Expenditure sectors">Tuition Fee</td>
+                                        <td data-label=" Engineering Technology">6,500/-</td>
+                                        <td data-label="Textile Technology">6,500/-</td>
                                     </tr align="center">
 
                                     <tr align="center">
-                                        <th >03</th>
-                                        <td>Laboratory Fee</td>
-                                        <td>3,000/-</td>
-                                        <td>4,000/-</td>
+                                        <td data-label="Serial no">03</td>
+                                        <td data-label="Expenditure sectors">Laboratory Fee</td>
+                                        <td data-label=" Engineering Technology">3,000/-</td>
+                                        <td data-label="Textile Technology">4,000/-</td>
 
                                     </tr>
 
                                     <tr align="center">
-                                        <th >04</th>
-                                        <td>Internal Exam Fee</td>
-                                        <td>500/-</td>
-                                        <td>500/-</td>
+                                        <td data-label="Serial no">04</td>
+                                        <td data-label="Expenditure sectors">Internal Exam Fee</td>
+                                        <td data-label=" Engineering Technology">500/-</td>
+                                        <td data-label="Textile Technology">500/-</td>
 
                                     </tr>
 
                                     <tr align="center">
-                                        <th >05</th>
-                                        <td>Establishment Fee</td>
-                                        <td>6,000/-</td>
-                                        <td>7,000/-</td>
+                                        <td data-label="Serial no">05</td>
+                                        <td data-label="Expenditure sectors">Establishment Fee</td>
+                                        <td data-label=" Engineering Technology">6,000/-</td>
+                                        <td data-label="Textile Technology">7,000/-</td>
 
                                     </tr>
 
                                     <tr align="center">
-                                        <th >06</th>
-                                        <td>Application fee of online by Bangladesh Technical Education Board</td>
-                                        <td>160/-</td>
-                                        <td>160/-</td>
+                                        <td data-label="Serial no">06</td>
+                                        <td data-label="Expenditure sectors">Application fee of online by Bangladesh Technical Education Board</td>
+                                        <td data-label=" Engineering Technology">160/-</td>
+                                        <td data-label="Textile Technology">160/-</td>
 
                                     </tr>
 
@@ -195,16 +193,16 @@
                             </table>
                             <ul>
                                 <li>
-                                    <h6 style="color: #7cc576;"><b>Admission fee is applicable only for 1st semester which
+                                    <h6 style="color: #188f0d;"><samp style="color: #f30c0c;">*</samp><b>Admission fee is applicable only for 1st semester which
                                             is
                                             5,000/- taka.</b></h6>
                                 </li>
                                 <li>
-                                    <h6 style="color: #7cc576;"> Diploma in Engineering Semester Fee <b> 16,000/-</b> taka.
+                                    <h6 style="color: #188f0d;"><samp style="color: #f30c0c;">*</samp> Diploma in Engineering Semester Fee <b> 16,000/-</b> taka.
                                     </h6>
                                 </li>
                                 <li>
-                                    <h6 style="color: #7cc576;"> Diploma in Textile Semester Fee<b> 18,000/-</b> taka.</h6>
+                                    <h6 style="color: #188f0d;"><samp style="color: #f30c0c;">*</samp> Diploma in Textile Semester Fee<b> 18,000/-</b> taka.</h6>
                                 </li>
                             </ul>
                             <br><br>

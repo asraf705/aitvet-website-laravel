@@ -13,7 +13,7 @@
                 --}}
 
               <li class="nav-item">
-                  <a class="nav-link" href="{{ route('category.index') }}" aria-controls="Category">
+                  <a class="nav-link" href="{{ route('manage.Category') }}" aria-controls="Category">
                       <i class="icon-paper menu-icon"></i>
                       <span class="menu-title">Category</span>
                   </a>

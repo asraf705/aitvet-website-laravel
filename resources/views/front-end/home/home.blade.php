@@ -419,7 +419,7 @@
                                 </p>
                                 <img src="{{ asset('front-end-assets') }}/img/testimonials/testimonials-1.jpg"
                                     class="testimonial-img" alt="">
-                                <h3 class="text-dark">Saul Goodman</h3>
+                                <h3 class="text-dark">Md. Asrafuzzaman</h3>
                                 <h4 class="text-dark">Computer Technology</h4>
                             </div>
                         </div><!-- End testimonial item -->
