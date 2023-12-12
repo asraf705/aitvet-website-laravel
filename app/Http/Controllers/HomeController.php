@@ -26,6 +26,10 @@ class HomeController extends Controller
         return view('front-end.academic.admission');
     }
 
+    public function admifrom(){
+        return view('front-end.student.admissionfrom');
+    }
+
     public function curriculum(){
         return view('front-end.academic.curriculum');
     }
@@ -43,17 +47,6 @@ class HomeController extends Controller
     }
 
     public function status(Request $request){
-
-        // $search = $request['search']??"";
-        // if ($search != ""){
-        //     //where
-        //     $paymentstatuses = Paymentstatus::where('roll','=',$search)->get();
-
-
-        // }
-
-        // $data = compact('paymentstatuses','search');
-        // return view('front-end.student.paymentstatus')->with($data);
 
         $searchQuary =$request['search']??"";
         $paymentstatuses = "";
