@@ -34,7 +34,7 @@
             Designed by <a href="https://portfolio-next-ashy-xi.vercel.app/" target="_blank">Plabon</a>
         </div>
         <div class="credits">
-            Development by <a href="https://asraf-resume.vercel.app/" target="_blank">Asraf</a>
+            Development by <a href="https://asraf-profile.vercel.app/" target="_blank">Asraf</a>
         </div>
     </div>
 </footer>
