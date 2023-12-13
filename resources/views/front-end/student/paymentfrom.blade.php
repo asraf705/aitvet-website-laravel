@@ -36,8 +36,7 @@
                         <div class="content pt-2 pt-lg-0 pl-0 pl-lg-2 ">
 
 
-                            <form action="{{ route('paymentstatuses.store') }}" method="POST"
-                                role="form">
+                            <form action="{{ route('paymentstatuses.store') }}" method="POST" role="form">
                                 @csrf
 
                                 <div class="row">
@@ -45,14 +44,10 @@
                                     <div class="form-group mt-4">
                                         <label for="depertment">Depertment </label> <br>
                                         <select class="form-control" name="depertment" id="depertment">
-                                            <option >Select Department</option>
-                                            <option value="Architecture">Architecture Technology</option>
-                                            <option value="Chemical">Chemical Technology</option>
-                                            <option value="Civil">Civil Technology</option>
-                                            <option value="Computer">Computer Technology</option>
-                                            <option value="Electrical">Electrical Technology</option>
-                                            <option value="Electronics">Electronics Technology</option>
-                                            <option value="Textile">Textile Technology</option>
+                                            <option value="" >Select Department</option>
+                                            @foreach ($depertments as $depertment)
+                                            <option value="{{$depertment->depertmant_name}}">{{$depertment->depertmant_name}}</option>
+                                            @endforeach
                                         </select>
                                     </div>
 
@@ -62,15 +57,11 @@
                                         <label for="semester">Semester </label> <br>
 
                                         <select class="form-control" name="semester" id="semester">
-                                            <option>Select Semester</option>
-                                            <option value="1st">1st</option>
-                                            <option value="2nd">2nd</option>
-                                            <option value="3rd">3rd</option>
-                                            <option value="4th">4th</option>
-                                            <option value="5th">5th</option>
-                                            <option value="6th">6th</option>
-                                            <option value="7th">7th</option>
-                                            <option value="8th">8th</option>
+
+                                            <option value="">Select Semester</option>
+                                            @foreach ($semesters as $semester)
+                                            <option value="{{$semester->semester}}">{{$semester->semester}}</option>
+                                            @endforeach
                                         </select>
                                     </div>
 
@@ -95,10 +86,9 @@
 
                                         <select class="form-control" name="paytype" id="paytype">
                                             <option>Select fees Type</option>
-                                            <option value="New Admission">New Admission Fee</option>
-                                            <option value="Admission">Admission Fee</option>
-                                            <option value="Re Admission">Re-Admission Fee</option>
-                                            <option value="Form Fillup">Form Fill up Fee</option>
+                                            @foreach ($fee as $fee)
+                                            <option value="{{$fee->fees_type}}">{{$fee->fees_type}}</option>
+                                            @endforeach
                                         </select>
                                     </div>
 
@@ -107,13 +97,14 @@
                                     <div class="form-group mt-3">
                                         <label for="amount">Amount</label> <br>
                                         <input type="number" class="form-control" name="amount" id="amount"
-                                            placeholder="Amount" min="2" required>
+                                            placeholder="Amount" min="2" block required>
                                     </div>
 
                                     <div class="form-group mt-3">
                                         <label for="bkashnum">Bkash Number</label> <br>
                                         <input type="number" class="form-control" name="bkashnum" id="bkashnum"
                                             placeholder="Bkash Number" min="5" required>
+                                            <label name='d'></label>
                                     </div>
 
                                     <div class="form-group mt-3">

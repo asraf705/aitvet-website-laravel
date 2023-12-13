@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\DepertmentCategory;
+use App\Models\FeesCategory;
+use App\Models\SemesterCategory;
 use Illuminate\Http\Request;
 use App\Models\Paymentstatus;
 
@@ -47,7 +50,11 @@ class HomeController extends Controller
     }
 
     public function paymentForm(){
-        return view('front-end.student.paymentfrom');
+        return view('front-end.student.paymentfrom',[
+            'depertments' => DepertmentCategory::all(),
+            'semesters' => SemesterCategory::all(),
+            'fee' => FeesCategory::all()
+        ]);
     }
 
     public function status(Request $request){
