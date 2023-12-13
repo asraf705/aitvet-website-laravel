@@ -26,8 +26,12 @@ class HomeController extends Controller
         return view('front-end.academic.admission');
     }
 
-    public function admifrom(){
+    public function sturegister(){
         return view('front-end.student.admissionfrom');
+    }
+
+    public function stulog(){
+        return view('front-end.student.stulog');
     }
 
     public function curriculum(){
@@ -52,8 +56,9 @@ class HomeController extends Controller
         $paymentstatuses = "";
         if($searchQuary != $paymentstatuses){
             //where
-            $paymentstatuses = Paymentstatus::where('roll','=',"$searchQuary")->get();
+            $paymentstatuses = Paymentstatus::where('roll','==',"$searchQuary")->get();
         }
+
 
         $data = compact('paymentstatuses','searchQuary');
         return view('front-end.student.paymentstatus',[
