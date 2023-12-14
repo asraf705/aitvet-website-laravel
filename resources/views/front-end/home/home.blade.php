@@ -559,7 +559,7 @@
                                 <div class="card">
                                     @foreach ($notises->take(10) as $notise)
                                         <div class="card-body">
-                                            <h5 class="title mb-1"><a style="color: #7cc576; " href="{{ route('single.notise',['titel'=>$notise->$titel])}}">{{$notise->titel}}</a></h5>
+                                            <h5 class="title mb-1"><a style="color: #7cc576; " href="{{ route('single.notise',['titel'=>$notise->titel])}}">{{$notise->titel}}</a></h5>
                                             <div class="meta mb-1"><span class="date">Published {{ date('j M Y',strtotime($notise->created_at))}}</span></div>
                                         </div>
                                     @endforeach

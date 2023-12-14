@@ -15,7 +15,7 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/about', [HomeController::class, 'about'])->name('about');
 Route::get('/instructor', [HomeController::class, 'instructor'])->name('instructor');
 Route::get('/notice', [HomeController::class, 'notice'])->name('notice');
-Route::get('/single-notise/{title}',[HomeController::class,'singlenotise'])->name('single.notise');
+Route::get('/single-notise/{titel}',[HomeController::class,'singlenotise'])->name('single.notise');
 Route::get('admission', [HomeController::class, 'admission'])->name('admission');
 Route::get('admission/register',[HomeController::class,'sturegister'])->name('sturegister');
 Route::get('admission/login',[HomeController::class,'stulog'])->name('stulogin');

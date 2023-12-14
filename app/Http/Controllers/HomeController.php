@@ -25,12 +25,14 @@ class HomeController extends Controller
     }
 
     public function notice(){
-        return view('front-end.home.notice');
+        return view('front-end.home.notice',[
+            'notises' => Notise::all()
+        ]);
     }
 
     public function singlenotise($titel){
         return view('front-end.home.single-notice',[
-            'notices'=>Notise::where('titel',$titel)->first()
+            'notises'=>Notise::where('titel',$titel)->first()
         ]);
     }
 
