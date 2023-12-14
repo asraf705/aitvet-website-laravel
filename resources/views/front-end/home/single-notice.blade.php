@@ -34,11 +34,12 @@
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title">{{ $notises->titel }}</h5>
-                            <p class="card-text"><small class="text-muted">Published
-                                    {{ date('j M Y', strtotime($notises->created_at)) }}</small></p>
+                            <div class="meta mb-1"><span class="date">Published by <a
+                                        href="{{ route('home') }}">AITVET</a>, on
+                                    {{ date('j M Y', strtotime($notises->created_at)) }}</span></div>
                         </div>
                         <img class="card-img-bottom" src="{{ asset($notises->image) }}" alt="Card image cap" width="100%"
-                            height="900px">
+                            height="1885px">
                     </div>
                 </div>
             </div>

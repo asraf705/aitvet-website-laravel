@@ -39,15 +39,17 @@ class Notise extends Model
         self::$notise = Notise::find($id);
         self::$notise->titel = $request->titel;
         if($request->file('image')){
-            if (self::$notise->image){
+            if(self::$notise->image){
                 if (file_exists(self::$notise->image)){
                     unlink(self::$notise->image);
                 }
             }
-            self::$notise->image = self::saveImage($request);
+            self::$notise->image = self::makeImgUrl($request);
         }
+
         self::$notise->save();
     }
+
 
 
 

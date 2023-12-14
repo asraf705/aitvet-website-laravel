@@ -38,42 +38,20 @@
                 <div class="row">
                     <section class="blog-list px-3 py-5 p-md-6">
                         <div class="container single-col-max-width">
-                            <div class="item mb-5">
-
-                                <div class="row g-3 g-xl-0">
-                                    <div class="col">
-                                        <h5 class="title mb-1"><a style="color: #7cc576; " href="blog-post.html">Top 3
-                                                JavaScript Frameworks</a></h5>
-                                        <div class="meta mb-1"><span class="date">Published 2 days ago</span></div>
-
+                            <div class="card">
+                                @foreach ($notises as $notise)
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h5 class="title mb-1"><a style="color: #7cc576; "
+                                                    href="{{ route('single.notise', ['titel' => $notise->titel]) }}">{{ $notise->titel }}</a>
+                                            </h5>
+                                            <div class="meta mb-1"><span class="date">Published by <a
+                                                        href="{{ route('home') }}">AITVET</a>, on
+                                                    {{ date('j M Y', strtotime($notise->created_at)) }}</span></div>
+                                        </div>
                                     </div>
-                                    <!--//col-->
-                                    <div class="col-2 col-xl-3">
-                                        <img class="img-notice post-thumb" src="{{ asset('front-end-assets') }}/img/not.jpg"
-                                            width="80%" height="150px" alt="image">
-                                    </div>
-                                </div><!--//row-->
-                            </div><!--//item-->
-
-                            <div class="item mb-5">
-                                <div class="row g-3 g-xl-0">
-
-                                    <div class="col">
-                                        <h5 class="title mb-1"><a style="color: #7cc576; " href="blog-post.html">About
-                                                Remote Working</a></h5>
-                                        <div class="meta mb-1"><span class="date">Published 3 months ago</span></div>
-                                    </div>
-                                    <!--//col-->
-
-                                    <div class="col-2 col-xl-3">
-                                        <img class="img-notice post-thumb "
-                                            src="{{ asset('front-end-assets') }}/img/not.jpg" width="80%" height="150px"
-                                            alt="image">
-                                    </div>
-
-                                </div><!--//row-->
-                            </div><!--//item-->
-
+                                @endforeach
+                            </div>
                         </div>
                     </section>
                 </div>

@@ -34,7 +34,7 @@ class NotiseController extends Controller
     public function store(Request $request)
     {
         Notise::saveInfo($request);
-        return back('');
+        return redirect(route('notise.index'));
     }
 
     /**
