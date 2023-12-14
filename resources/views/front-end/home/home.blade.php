@@ -7,7 +7,8 @@
             <a href="{{ route('home') }}" class="hero-logo" data-aos="zoom-in"><img
                     src="{{ asset('front-end-assets') }}/img/hero-logo.png" alt=""></a>
             <h1 data-aos="zoom-in">Welcome To <br> Ahsanullah Institute of Technical & Vocational Education & Training
-                <br>(AITVET)</h1>
+                <br>(AITVET)
+            </h1>
             <h2 data-aos="fade-up" class="text-light">Since : 1995 ||<span> Inst. Code : 50528</span></h2>
             <a data-aos="fade-up" data-aos-delay="200" href="#about" class="btn-get-started scrollto">Get Started</a>
         </div>
@@ -555,47 +556,21 @@
                         <div class="container single-col-max-width">
                             <div class="item mb-5">
 
-                                <div class="row g-3 g-xl-0">
-                                    <div class="col">
-                                        <h5 class="title mb-1"><a style="color: #7cc576; " href="blog-post.html">Top 3
-                                                JavaScript Frameworks</a></h5>
-                                        <div class="meta mb-1"><span class="date">Published 2 days ago</span></div>
+                                <div class="card">
+                                    @foreach ($notises->take(10) as $notise)
+                                        <div class="card-body">
+                                            <h5 class="title mb-1"><a style="color: #7cc576; " href="{{ route('single.notise',['$titel'=>$notise->$titel])}}">{{$notise->titel}}</a></h5>
+                                            <div class="meta mb-1"><span class="date">Published {{ date('j M Y',strtotime($notise->created_at))}}</span></div>
+                                        </div>
+                                    @endforeach
+                                </div>
 
-                                    </div>
-                                    <!--//col-->
-                                    <div class="col-2 col-xl-3">
-                                        <img class="img-notice post-thumb"
-                                            src="{{ asset('front-end-assets') }}/img/not.jpg" width="80%"
-                                            height="150px" alt="image">
-                                    </div>
-                                </div><!--//row-->
-                            </div><!--//item-->
+                                <nav class="blog-nav nav nav-justified my-5">
+                                    <a class="nav-link-next nav-item nav-link rounded" href="{{ route('notice') }}">
+                                        <button type="button" class="btn btn-outline-success">More</button></a>
+                                </nav>
 
-                            <div class="item mb-5">
-                                <div class="row g-3 g-xl-0">
-
-                                    <div class="col">
-                                        <h5 class="title mb-1"><a style="color: #7cc576; " href="blog-post.html">About
-                                                Remote Working</a></h5>
-                                        <div class="meta mb-1"><span class="date">Published 3 months ago</span></div>
-                                    </div>
-                                    <!--//col-->
-
-                                    <div class="col-2 col-xl-3">
-                                        <img class="img-notice post-thumb "
-                                            src="{{ asset('front-end-assets') }}/img/not.jpg" width="80%"
-                                            height="150px" alt="image">
-                                    </div>
-
-                                </div><!--//row-->
-                            </div><!--//item-->
-
-                            <nav class="blog-nav nav nav-justified my-5">
-                                <a class="nav-link-next nav-item nav-link rounded" href="{{ route('notice') }}">
-                                    <button type="button" class="btn btn-outline-success">More</button></a>
-                            </nav>
-
-                        </div>
+                            </div>
                     </section>
                 </div>
 

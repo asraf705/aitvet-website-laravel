@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\DepertmentCategory;
 use App\Models\FeesCategory;
+use App\Models\Notise;
 use App\Models\SemesterCategory;
 use Illuminate\Http\Request;
 use App\Models\Paymentstatus;
@@ -11,7 +12,9 @@ use App\Models\Paymentstatus;
 class HomeController extends Controller
 {
     public function index(){
-        return view('front-end.home.home');
+        return view('front-end.home.home',[
+            'notises' => Notise::all()
+        ]);
     }
 
     public function about(){
@@ -23,6 +26,12 @@ class HomeController extends Controller
 
     public function notice(){
         return view('front-end.home.notice');
+    }
+
+    public function singlenotise($titel){
+        return view('front-end.home.single-notice',[
+            'notices'=>Notise::where('title',$titel)->first()
+        ]);
     }
 
     public function admission(){
