@@ -30,7 +30,7 @@ class HomeController extends Controller
 
     public function singlenotise($titel){
         return view('front-end.home.single-notice',[
-            'notices'=>Notise::where('title',$titel)->first()
+            'notices'=>Notise::where('titel',$titel)->first()
         ]);
     }
 
