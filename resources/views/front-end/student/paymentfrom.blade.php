@@ -68,9 +68,9 @@
                                     {{-- roll   --}}
 
                                     <div class="form-group mt-3">
-                                        <label for="roll">Class Roll</label> <br>
+                                        <label for="roll">Student ID</label> <br>
                                         <input type="number" class="form-control" name="roll" id="roll"
-                                            placeholder="Class Roll" min="3" required>
+                                            placeholder="Student ID" min="3" required>
                                     </div>
 
                                     <br><br><br><br>
@@ -97,20 +97,20 @@
                                     <div class="form-group mt-3">
                                         <label for="amount">Amount</label> <br>
                                         <input type="number" class="form-control" name="amount" id="amount"
-                                            placeholder="Amount" min="2" block required>
+                                            placeholder="Amount" min="2" required >
                                     </div>
 
                                     <div class="form-group mt-3">
                                         <label for="bkashnum">Bkash Number</label> <br>
                                         <input type="number" class="form-control" name="bkashnum" id="bkashnum"
-                                            placeholder="Bkash Number" min="5" required>
+                                            placeholder="Bkash Number" min="5" required >
                                             <label name='d'></label>
                                     </div>
 
                                     <div class="form-group mt-3">
                                         <label for="txnid">Transaction ID(Txn. ID)</label> <br>
                                         <input type="text" class="form-control" name="txnid" id="txnid"
-                                            placeholder="Txn. ID" min="4" required>
+                                            placeholder="Txn. ID" min="4" required >
                                     </div>
 
                                     <br>

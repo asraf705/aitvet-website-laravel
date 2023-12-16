@@ -11,25 +11,24 @@
                         <h4>Payment Print</h4>
                         <hr>
 
-                        <form method="GET" role="form">
+                        <form method="GET" id="ex" role="form">
 
                             <div class="row">
                                 {{-- depertment deop down  --}}
                                 <div class="form-group mt-4">
                                     <label for="depertment">Depertment: </label> <br>
-                                    <select class="form-control" name="dept" id="dept"  aria-label="dept">
-                                        <option value="Architecture">Architecture Technology</option>
-                                        <option value="Chemical">Chemical Technology</option>
-                                        <option value="Civil">Civil Technology</option>
-                                        <option value="Computer">Computer Technology</option>
-                                        <option value="Electrical">Electrical Technology</option>
-                                        <option value="Electronics">Electronics Technology</option>
-                                        <option value="Textile">Textile Technology</option>
+                                    <select class="form-control" name="depertment" id="depertment">
+                                        <option >Select Department</option>
+                                        @foreach ($depertments as $depertment)
+                                            <option data-filter="{{ $depertment->depertmant_name }}">
+                                                {{ $depertment->depertmant_name }}
+                                            </option>
+                                        @endforeach
                                     </select>
 
                                 </div>
 
-                                {{-- semester deop down--}}
+                                {{-- semester deop down --}}
 
                                 <div class="form-group mt-4">
                                     <label for="semester">Semester: </label> <br>
@@ -46,14 +45,18 @@
                                     </select>
                                 </div>
 
+
+
+
+
                                 {{-- Payment type deop down  --}}
 
                                 <div class="form-group mt-4">
                                     <label for="paytype">Payment Type: </label> <br>
 
                                     <select class="form-control" name="paytype" id="paytype">
-                                        <option>Select Payment Type</option>
-                                        <option value="New Admission">New Admission Fee</option>
+                                        <option >Select Payment Type</option>
+                                        <option >New Admission Fee</option>
                                         <option value="Admission">Admission Fee</option>
                                         <option value="Re Admission">Re-Admission Fee</option>
                                         <option value="Form Fillup">Form Fill up Fee</option>
@@ -63,11 +66,12 @@
 
                                 <div class="text-center d-block">
                                     <br>
-                                    <button type="submit" class="btn btn-outline-success w-100 ">Search</button>
+                                    <button type="search" class="btn btn-outline-success w-100 ">Search</button>
                                 </div>
                             </div>
                         </form>
- {{-- search end  --}}
+
+                        {{-- search end  --}}
 
                         <hr>
 
@@ -92,7 +96,8 @@
                                         @if ($paymentstatus->status == 1)
                                             <tr align="center">
                                                 <td>{{ $loop->iteration }}</td>
-                                                <td>{{ $paymentstatus->depertment }}</td>
+                                                <td class='{{ $depertment->depertmant_name }}'>
+                                                    {{ $paymentstatus->depertment }}</td>
                                                 <th>{{ $paymentstatus->semester }}</th>
                                                 <td>{{ $paymentstatus->roll }}</td>
                                                 <td>{{ $paymentstatus->paytype }}</td>
@@ -105,6 +110,9 @@
 
                                 </tbody>
                             </table>
+
+
+
                         </div>
                     </div>
                 </div>
@@ -115,5 +123,6 @@
         </div>
     </div>
     </div>
+
     <!-- content-wrapper ends -->
-@endsection
+        @endsection

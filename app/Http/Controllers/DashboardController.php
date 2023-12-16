@@ -3,8 +3,12 @@
 namespace App\Http\Controllers;
 
 
+use App\Models\DepertmentCategory;
+use App\Models\FeesCategory;
+use App\Models\SemesterCategory;
 use Illuminate\Http\Request;
 use App\Models\Paymentstatus;
+use DB;
 
 class DashboardController extends Controller
 {
@@ -43,20 +47,13 @@ class DashboardController extends Controller
 
 
         $search = $request['search']??"";
-        if ($search != ""){
-            //where
-            $paymentstatuses = Paymentstatus::where('depertment','=',"%$search%")->get();
-            $paymentstatuses = Paymentstatus::orwhere('semester','=',$search)->get();
-            $paymentstatuses = Paymentstatus::orwhere('roll','=',$search)->get();
-            $paymentstatuses = Paymentstatus::orwhere('paytype','=',"%$search")->get();
 
-        }
-        else{
-            $paymentstatuses = Paymentstatus::all();
-        }
-
-        $data = compact('paymentstatuses','search');
-        return view('admin.acount-manag.payment-print')->with($data);
+        return view('admin.acount-manag.payment-print',[
+            'depertments' => DepertmentCategory::all(),
+            'semesters' => SemesterCategory::all(),
+            'fees' => FeesCategory::all(),
+            'paymentstatuses' => Paymentstatus::all()
+        ]);
 
     }
 

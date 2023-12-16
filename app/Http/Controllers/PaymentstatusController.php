@@ -42,7 +42,7 @@ class PaymentstatusController extends Controller
     public function store(Request $request)
     {
         Paymentstatus::saveInfo($request);
-        return redirect(route('paymentstatuses.index'));
+        return back();
     }
 
     /**
@@ -78,7 +78,7 @@ class PaymentstatusController extends Controller
     public function update(Request $request, string $id)
     {
         Paymentstatus::updateInfo($request,$id);
-        return redirect(route('paymentstatuses.index'));
+        return back();
     }
 
     /**

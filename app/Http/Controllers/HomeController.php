@@ -74,10 +74,8 @@ class HomeController extends Controller
         $paymentstatuses = "";
         if($searchQuary != $paymentstatuses){
             //where
-            $paymentstatuses = Paymentstatus::where('roll','==',"$searchQuary")->get();
+            $paymentstatuses = Paymentstatus::where('roll','=',"$searchQuary")->get();
         }
-
-
         $data = compact('paymentstatuses','searchQuary');
         return view('front-end.student.paymentstatus',[
             'paymentstatuses' => Paymentstatus::all(),
