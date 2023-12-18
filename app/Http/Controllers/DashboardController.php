@@ -45,9 +45,6 @@ class DashboardController extends Controller
 
     public function paymentPrint(Request $request){
 
-
-        $search = $request['search']??"";
-
         return view('admin.acount-manag.payment-print',[
             'depertments' => DepertmentCategory::all(),
             'semesters' => SemesterCategory::all(),

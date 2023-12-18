@@ -11,7 +11,7 @@
                         <h4>Payment Print</h4>
                         <hr>
 
-                        <form method="GET" id="ex" role="form">
+                        <form role="form">
 
                             <div class="row">
                                 {{-- depertment deop down  --}}
@@ -20,9 +20,7 @@
                                     <select class="form-control" name="depertment" id="depertment">
                                         <option >Select Department</option>
                                         @foreach ($depertments as $depertment)
-                                            <option data-filter="{{ $depertment->depertmant_name }}">
-                                                {{ $depertment->depertmant_name }}
-                                            </option>
+                                            <option>{{ $depertment->depertmant_name }}</option>
                                         @endforeach
                                     </select>
 
@@ -34,14 +32,9 @@
                                     <label for="semester">Semester: </label> <br>
                                     <select class="form-control" name="semester" id="semester">
                                         <option>Select Semester</option>
-                                        <option value="1st">1st</option>
-                                        <option value="2nd">2nd</option>
-                                        <option value="3rd">3rd</option>
-                                        <option value="4th">4th</option>
-                                        <option value="5th">5th</option>
-                                        <option value="6th">6th</option>
-                                        <option value="7th">7th</option>
-                                        <option value="8th">8th</option>
+                                        @foreach ($semesters as $semester)
+                                            <option>{{ $semester->semester }}</option>
+                                        @endforeach
                                     </select>
                                 </div>
 
@@ -56,10 +49,9 @@
 
                                     <select class="form-control" name="paytype" id="paytype">
                                         <option >Select Payment Type</option>
-                                        <option >New Admission Fee</option>
-                                        <option value="Admission">Admission Fee</option>
-                                        <option value="Re Admission">Re-Admission Fee</option>
-                                        <option value="Form Fillup">Form Fill up Fee</option>
+                                        @foreach ($fees as $fee)
+                                            <option>{{ $fee->fees_type}}</option>
+                                        @endforeach
                                     </select>
                                 </div>
 
@@ -79,7 +71,6 @@
                             <table class="table table-bordered">
                                 <thead>
                                     <tr align="center">
-                                        <th>Sl</th>
                                         <th>Depertment</th>
                                         <th>Semester</th>
                                         <th>Class Roll</th>
@@ -95,9 +86,7 @@
                                     @foreach ($paymentstatuses as $paymentstatus)
                                         @if ($paymentstatus->status == 1)
                                             <tr align="center">
-                                                <td>{{ $loop->iteration }}</td>
-                                                <td class='{{ $depertment->depertmant_name }}'>
-                                                    {{ $paymentstatus->depertment }}</td>
+                                                <td>{{ $paymentstatus->depertment }}</td>
                                                 <th>{{ $paymentstatus->semester }}</th>
                                                 <td>{{ $paymentstatus->roll }}</td>
                                                 <td>{{ $paymentstatus->paytype }}</td>
