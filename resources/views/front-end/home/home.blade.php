@@ -418,12 +418,28 @@
                                     at AITVET. The hands-on experience and guidance from knowledgeable faculty empowered me
                                     to excel in the ever-evolving field of technology.
                                 </p>
-                                <img src="{{ asset('front-end-assets') }}/img/testimonials/testimonials-1.jpg"
+                                <img src="{{ asset('front-end-assets') }}/img/testimonials/cmt-1.jpg"
                                     class="testimonial-img" alt="">
                                 <h3 class="text-dark">Md. Asrafuzzaman</h3>
                                 <h4 class="text-dark">Computer Technology</h4>
                             </div>
-                        </div><!-- End testimonial item -->
+                        </div>
+                        <!-- End testimonial item -->
+
+                        <div class="swiper-slide">
+                            <div class="testimonial-item">
+                                <p class="text-dark">
+                                    Studying Computer Technology at AITVET has been a transformative experience. The
+                                    institute's emphasis on creativity, technical proficiency, and practical design skills
+                                    prepared me to innovate and thrive in the competitive world of computer.
+                                </p>
+                                <img src="{{ asset('front-end-assets') }}/img/testimonials/cmt-2.jpg"
+                                    class="testimonial-img" alt="">
+                                <h3 class="text-dark">Plabon Biswas</h3>
+                                <h4 class="text-dark">Computer Technology</h4>
+                            </div>
+                        </div>
+                        <!-- End testimonial item -->
 
                         <div class="swiper-slide">
                             <div class="testimonial-item">
@@ -437,7 +453,8 @@
                                 <h3 class="text-dark">Sara Wilsson</h3>
                                 <h4 class="text-dark">Architecture Technology</h4>
                             </div>
-                        </div><!-- End testimonial item -->
+                        </div>
+                        <!-- End testimonial item -->
 
                         <div class="swiper-slide">
                             <div class="testimonial-item">
