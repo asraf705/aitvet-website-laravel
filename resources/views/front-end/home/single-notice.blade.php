@@ -3,6 +3,7 @@
 @include('front-end.include.header')
 
 @section('content')
+
     <main id="main" data-aos="fade-up">
 
         <!-- ======= Breadcrumbs ======= -->
@@ -47,4 +48,5 @@
 
         <!-- ======= Notice Section ======= -->
     </main>
+
 @endsection

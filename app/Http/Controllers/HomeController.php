@@ -8,6 +8,8 @@ use App\Models\Notise;
 use App\Models\SemesterCategory;
 use Illuminate\Http\Request;
 use App\Models\Paymentstatus;
+use App\Mail\ContactMail;
+use Illuminate\Support\Facades\Mail;
 
 class HomeController extends Controller
 {
@@ -15,6 +17,11 @@ class HomeController extends Controller
         return view('front-end.home.home',[
             'notises' => Notise::all()
         ]);
+    }
+
+    public function contact_mail_send(Request $request){
+        Mail::to('asrafuzzamanshodow@gmail.com')->send(new ContactMail());
+        return redirect('home#contact');
     }
 
     public function about(){

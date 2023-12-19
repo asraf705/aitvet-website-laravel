@@ -12,6 +12,7 @@ use App\Http\Controllers\CategoryController;
 
 // Front-end Start
 Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::post('contact_mail',[HomeController::class,'contact_mail_send']);
 Route::get('/about', [HomeController::class, 'about'])->name('about');
 Route::get('/instructor', [HomeController::class, 'instructor'])->name('instructor');
 Route::get('/notice', [HomeController::class, 'notice'])->name('notice');
