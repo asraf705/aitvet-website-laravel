@@ -1259,6 +1259,16 @@ section {
 
 }
 
+@media (max-width: 768px) {
+    .principle-content {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    .principle-massage {
+        width: 100%;
+    }
+}
+
 
 
 .member-info h4 {
